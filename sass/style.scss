@@ -1,0 +1,54 @@
+/*
+Theme Name: wayfarer
+Description: theme for the wayfarer website
+Author: Cesar Correchel
+Author URI: https://github.com/cesarcor
+Version: 1.0.0
+License: MIT
+License URI: http://www.gnu.org/licenses/gpl.html
+Tags: WordPress, Theme
+Text Domain: wayfarer
+*/
+
+$background: #F3F5F7;
+$white: #FFFFFF;
+$text-color: #112233;
+
+
+/* =========== RESET =========== */
+@import 'partials/reset';
+
+
+/* =========== GENERAL STYLES =========== */
+body{
+background-color: $background;
+}
+
+.site{
+    background-color: $background;
+}
+
+.post-list-contain{
+    background: $white;
+    border-radius: 3px;
+    padding: 15px;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* =========== HEADER =========== */
+@import 'partials/header';
+
+/* =========== HERO =========== */
+@import 'partials/hero';
+
+/* =========== POSTS =========== */
+@import 'partials/posts';
+
+/* =========== SIDEBAR =========== */
+@import 'partials/sidebar';
+
+/* =========== FOOTER =========== */
+@import 'partials/footer';

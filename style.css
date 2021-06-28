@@ -1,0 +1,205 @@
+/*
+Theme Name: wayfarer
+Description: theme for the wayfarer website
+Author: Cesar Correchel
+Author URI: https://github.com/cesarcor
+Version: 1.0.0
+License: MIT
+License URI: http://www.gnu.org/licenses/gpl.html
+Tags: WordPress, Theme
+Text Domain: wayfarer
+*/
+/* =========== RESET =========== */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* =========== GENERAL STYLES =========== */
+body {
+  background-color: #F3F5F7; }
+
+.site {
+  background-color: #F3F5F7; }
+
+.post-list-contain {
+  background: #FFFFFF;
+  border-radius: 3px;
+  padding: 15px; }
+
+a {
+  text-decoration: none; }
+
+/* =========== HEADER =========== */
+.custom-logo {
+  max-width: 100%;
+  object-fit: scale-down; }
+
+/* =========== HERO =========== */
+.mobile-post-carousel {
+  margin: 15px 0;
+  font-family: "Roboto", sans-serif; }
+  .mobile-post-carousel .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    margin: 0 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    opacity: 0.4; }
+    .mobile-post-carousel .carousel-indicators li.active {
+      opacity: 1; }
+  .mobile-post-carousel .carousel-post-item .carousel-post-item__container {
+    position: relative; }
+  .mobile-post-carousel .carousel-post-item .post-item__taxonomies {
+    position: absolute; }
+  .mobile-post-carousel .carousel-post-item__title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 35px;
+    text-align: center; }
+    .mobile-post-carousel .carousel-post-item__title a {
+      color: #FFFFFF;
+      text-decoration: none; }
+  .mobile-post-carousel .carousel-post-item img {
+    object-fit: cover; }
+  @media (min-width: 768px) {
+    .mobile-post-carousel {
+      display: none; } }
+
+.hero-post-masonry {
+  display: none; }
+  .hero-post-masonry .hero-post-masonry__col:first-of-type {
+    flex: 0 1 50%; }
+  .hero-post-masonry .hero-post-masonry__col:last-of-type {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 0 0 50%; }
+  .hero-post-masonry .masonry-post-item {
+    position: relative;
+    cursor: pointer; }
+    .hero-post-masonry .masonry-post-item__img {
+      width: 100%;
+      height: 100%; }
+      .hero-post-masonry .masonry-post-item__img img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%; }
+    .hero-post-masonry .masonry-post-item__content {
+      position: absolute;
+      z-index: 2;
+      padding: 10px;
+      bottom: 10px; }
+      .hero-post-masonry .masonry-post-item__content .post-item-title {
+        line-height: 1; }
+        .hero-post-masonry .masonry-post-item__content .post-item-title a {
+          color: #FFFFFF;
+          text-decoration: none;
+          font-size: clamp(12px, 5vw, 18px); }
+          .hero-post-masonry .masonry-post-item__content .post-item-title a:hover {
+            text-decoration: underline; }
+    .hero-post-masonry .masonry-post-item::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-image: linear-gradient(-180deg, rgba(12, 30, 49, 0) 0%, rgba(12, 30, 49, 0.6) 99%); }
+    .hero-post-masonry .masonry-post-item:hover a {
+      text-decoration: underline; }
+    .hero-post-masonry .masonry-post-item.masonry-left-col-item {
+      height: 100%; }
+    .hero-post-masonry .masonry-post-item.masonry-right-col-items {
+      width: 50%; }
+  @media (min-width: 768px) {
+    .hero-post-masonry {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 25px 0; } }
+
+/* =========== POSTS =========== */
+.post-item {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 20px; }
+  .post-item__img {
+    width: 100%;
+    margin: 0; }
+    .post-item__img img {
+      width: 100%;
+      object-fit: cover; }
+  .post-item__taxonomies {
+    padding: 0;
+    margin: 0; }
+    .post-item__taxonomies li {
+      display: inline-block;
+      padding: 5px; }
+    .post-item__taxonomies .post-item__post-tag {
+      background-color: #F3F5F7; }
+  .post-item__content .post-title {
+    margin: 0; }
+    .post-item__content .post-title a {
+      color: #112233;
+      text-decoration: none; }
+  @media (min-width: 768px) {
+    .post-item {
+      flex-wrap: nowrap; }
+      .post-item .post-item__img {
+        width: 45%; }
+      .post-item .post-item__content {
+        width: 55%;
+        margin-left: 15px; } }
+
+/* =========== SIDEBAR =========== */
+.sidebar-container {
+  background-color: #FFFFFF;
+  height: 300px; }
+
+/* =========== FOOTER =========== */
+.footer {
+  padding: 20px 0; }
